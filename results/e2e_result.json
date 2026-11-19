@@ -1,0 +1,157 @@
+{
+ "verdict": "PASS",
+ "n_pass": 29,
+ "n_total": 29,
+ "n_osd": 334,
+ "n_alert_records": 22,
+ "engine": "PHMDroneStreamEngine",
+ "checks": [
+  {
+   "check": "normal_零告警",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "v_burst_速度ALERT确认",
+   "pass": true,
+   "detail": "[('alerts', 'V_SPEED', 'WARN', 'L2物理'), ('alerts', 'V_SPEED', 'ALERT', 'L2物理')]"
+  },
+  {
+   "check": "v_burst_首帧WARN",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "accel_seq_加速度ALERT(fpv档)",
+   "pass": true,
+   "detail": "[('alerts', 'ACCEL', 'WARN', 'L2物理'), ('alerts', 'ACCEL', 'ALERT', 'L2物理')]"
+  },
+  {
+   "check": "roll_burst_姿态ALERT确认",
+   "pass": true,
+   "detail": "[('alerts', 'ATT_ROLL', 'WARN', 'L2物理'), ('alerts', 'ATT_ROLL', 'ALERT', 'L2物理')]"
+  },
+  {
+   "check": "spike_单帧只WARN不ALERT",
+   "pass": true,
+   "detail": "[('quality', 'L1_SPEED_SPIKE', 'WARN', 'L1质量')]"
+  },
+  {
+   "check": "dup_L1质量口径",
+   "pass": true,
+   "detail": "[('quality', 'L1_DUP', 'WARN', 'L1质量')]"
+  },
+  {
+   "check": "jump_L1质量口径(数据缺陷非物理违规)",
+   "pass": true,
+   "detail": "[('quality', 'L1_JUMP', 'WARN', 'L1质量')]"
+  },
+  {
+   "check": "哈希链_全链验证通过",
+   "pass": true,
+   "detail": "ok=True n=32 final=83dea3ea3b737fd9dced6bac414ac921c23bd1298a7c6728a3d17d80fac0ba5f"
+  },
+  {
+   "check": "哈希链_篡改检测生效",
+   "pass": true,
+   "detail": "tampered_ok=False"
+  },
+  {
+   "check": "哈希链_全256位",
+   "pass": true,
+   "detail": "hash_len=64"
+  },
+  {
+   "check": "帧级入链_链记录数≥帧数",
+   "pass": true,
+   "detail": "chain_n=32"
+  },
+  {
+   "check": "头部外锚_锚文件与链尾一致",
+   "pass": true,
+   "detail": "{'sn': 'SN_VBURST_002', 'n': 32, 'head': '83dea3ea3b737fd9dced6bac414ac921c23bd1298a7c6728a3d17d80fac0ba5f', 'ts': 17950"
+  },
+  {
+   "check": "全文件重写_本地验证被攻破(如实暴露链的局限)",
+   "pass": true,
+   "detail": "local_ok=True"
+  },
+  {
+   "check": "全文件重写_外部锚点戳穿",
+   "pass": true,
+   "detail": "anchor catches rewrite"
+  },
+  {
+   "check": "重启安全续链",
+   "pass": true,
+   "detail": "n=33 ok=True"
+  },
+  {
+   "check": "总OSD帧数>150",
+   "pass": true,
+   "detail": "n_osd=334"
+  },
+  {
+   "check": "dock_normal_零L2告警",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "batt_drop_骤降ALERT+迫降线ALERT+RTH_WARN",
+   "pass": true,
+   "detail": "[('alerts', 'BATT_DROP', 'WARN', 'L2物理'), ('alerts', 'BATT_DROP', 'ALERT', 'L2物理'), ('alerts', 'BATT_RTH', 'WARN', 'L2物理'), ('alerts', 'BATT_LAND', 'WARN', 'L2物理'), ('alerts', 'BATT_LAND', 'ALERT', 'L2物理')]"
+  },
+  {
+   "check": "gps_loss_丢星ALERT+弱星WARN",
+   "pass": true,
+   "detail": "[('alerts', 'GPS_LOSS', 'WARN', 'L2物理'), ('alerts', 'GPS_LOSS', 'ALERT', 'L2物理')][('quality', 'GPS_WEAK', 'WARN', 'L1质量')]"
+  },
+  {
+   "check": "wind_high_风载WARN",
+   "pass": true,
+   "detail": "[('alerts', 'WIND_HIGH', 'WARN', 'L2物理'), ('alerts', 'WIND_HIGH', 'WARN', 'L2物理')]"
+  },
+  {
+   "check": "rid_off_RemoteID监管WARN",
+   "pass": true,
+   "detail": "[('alerts', 'RID_OFF', 'WARN', 'L2物理')]"
+  },
+  {
+   "check": "geofence_越界ALERT+接近WARN",
+   "pass": true,
+   "detail": "[('alerts', 'GEOFENCE_NEAR', 'WARN', 'L2物理'), ('alerts', 'GEOFENCE', 'ALERT', 'L2物理')]"
+  },
+  {
+   "check": "REST_stats_帧数与告警可见",
+   "pass": true,
+   "detail": "n_osd=334 n_alerts=22"
+  },
+  {
+   "check": "REST_devices_在线SN列表",
+   "pass": true,
+   "detail": "['SN_ACCEL_003', 'SN_BATT_009', 'SN_DOCK_008', 'SN_DUP_006', 'SN_FENCE_013', 'SN_GPS_010', 'SN_JUMP_007', 'SN_NORMAL_001', 'SN_RID_012', 'SN_ROLL_004', 'SN_SPIKE_005', 'SN_VBURST_002', 'SN_WIND_011']"
+  },
+  {
+   "check": "REST_alerts_按sn查询",
+   "pass": true,
+   "detail": "n=2"
+  },
+  {
+   "check": "REST_chain_verify_通过",
+   "pass": true,
+   "detail": "{'sn': 'SN_VBURST_002', 'ok': True, 'records': 33, 'final_hash': '87bcfe51ffa9c5872f993508d550d7e75282cfec3012177442dd5b3ac6cf643d', 'anchor_checked': True, 'anchor_match': True}"
+  },
+  {
+   "check": "REST_config_围栏配置生效",
+   "pass": true,
+   "detail": "{'ok': True, 'sn': 'SN_FENCE_013', 'geofence': {'type': 'circle', 'lat': 22.817, 'lon': 108.366, 'radius_m': 100}, 'profile': 'dock'}"
+  },
+  {
+   "check": "webhook_L2告警已推送",
+   "pass": true,
+   "detail": "hits=7 sample=[{'type': 'ALERT', 'rule': 'V_SPEED', 'level': 'ALERT', 'caliber': 'L2物理', 'measured': 26.0, 'limit': 21.0, 'ts': 1795073196932, 'sn': 'SN_VBURST_002', 'chain_head': 'c908cff3ac367119705934b5a68e5ffe2c6f34dfec2f7ca15ae30d0499f08bb1', 'chain_n': 24}]"
+  }
+ ],
+ "ts": "2026-11-19 15:26:30",
+ "audit_sha256": "d11a927881958bd5"
+}
